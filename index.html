@@ -15,22 +15,25 @@
     <header class="container-fluid text-center py-3 bg-dark text-white">
         <h1>Cadastro de produto</h1>
     </header>    
-    <main class="container-fluid d-flex flex-column flex-md-row justify-content-center py-5 gap-5">
-        <div class="shadow-sm p-3 mx-5 col-10 col-md-4">
-            <h2 class="text-center">Usuario</h2>
-            <form action="php/index.php" method="post">
-                <label for="" class="form-label">
-                    Nome:
-                </label>
-                <input type="text" class="form-control" name="nome-usuario">
-                <label for="" class="form-label">
-                    Email:
-                </label>
-                <input type="email" class="form-control mb-3" name="email-usuario">
-
-                <button class="btn btn-primary" type="submit">Cadastrar</button>
-            </form>
-        </div>
+    <main >
+        <section class="shadow-sm p-3 mx-5 col-10 col-md-4">
+            <div >
+                <h2 class="text-center">Usuario</h2>
+                <form action="php/index.php" method="post">
+                    <label for="" class="form-label">
+                        Nome:
+                    </label>
+                    <input type="text" class="form-control" name="nome-usuario">
+                    <label for="" class="form-label">
+                        Email:
+                    </label>
+                    <input type="email" class="form-control mb-3" name="email-usuario">
+    
+                    <button class="btn btn-primary" type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+        
         <div class="shadow-sm p-3 mx-5 col-10 col-md-4">
             <h2 class="text-center">Produto</h2>
             <form action="php/index.php" method="post">
