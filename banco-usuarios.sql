@@ -7,5 +7,13 @@ email varchar(100) not null unique,
 datacad timestamp not null default current_timestamp
 );
 
+create table produtos(
+id int auto_increment primary key,
+nome varchar(50) not null, 
+email double(3,2) not null ,
+datacad timestamp not null default current_timestamp
+);
 
 select * from usuarios;
+
+select * from produtos;
