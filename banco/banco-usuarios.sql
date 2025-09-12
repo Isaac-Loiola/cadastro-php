@@ -10,7 +10,7 @@ datacad timestamp not null default current_timestamp
 create table produtos(
 id int auto_increment primary key,
 nome varchar(50) not null, 
-email double(3,2) not null ,
+email double(6,2) not null ,
 datacad timestamp not null default current_timestamp
 );
 
