@@ -11,4 +11,10 @@ require_once("db.php");
             ':preco' => $preco
         ]);
     }
+
+    function listaProdutos() : array{
+        $pdo = getConnection();
+        $cmd = $pdo->query("select * from produtos");
+        return $cmd->fetch();
+    }
 ?>
