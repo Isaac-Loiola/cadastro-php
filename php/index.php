@@ -17,8 +17,9 @@ require_once("usuarios.php");
                 (float)$_POST['preco-produto']
             );
         }
-            
     }    
+
+    $produtos = listaProdutos();
 
 
 ?>
@@ -40,7 +41,7 @@ require_once("usuarios.php");
     <header class="container-fluid text-center py-3 bg-dark text-white">
         <h1>Cadastro de produto</h1>
     </header>    
-    <main class="d-flex justify-content-center flex-column flex-md-row my-5">
+    <main class="d-flex justify-content-center flex-column flex-md-row my-5 flex-wrap gap-5">
         <div class="shadow-sm p-3 mx-5 col-10 col-md-4">
             <h2 class="text-center">Usuario</h2>
             <form action="" method="post">
@@ -73,6 +74,23 @@ require_once("usuarios.php");
                 <button class="btn btn-primary" type="submit" name="cad-produto">Cadastrar</button>
             </form>
         </div>
+        <table class="table table-bordered table-striped col-6">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Data</th>
+                <th>Ações</th>
+            </tr>
+            <?php foreach($produtos as $produto):?>
+                <tr>
+                    <td><?= $produto['id']?></td>
+                    <td><?= $produto['nome']?></td>
+                    <td><?= $produto['preco']?></td>
+                    <td><?= date('d/m/Y H:i', strtotime($produto['datacad'])) ?></td>
+                </tr>
+            <?php endforeach;?>
+        </table>
 
         
     </main>
