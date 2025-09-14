@@ -8,7 +8,7 @@
     function getConnection() : PDO{
         static $pdo;
         if ($pdo == null){
-            $pdo = new PDO("mysql:host=10.91.47.77;dbname=modelophp_db",
+            $pdo = new PDO("mysql:host=127.0.0.1;dbname=modelophp_db",
              "root", 
              "adsz..XcW21034", 
              [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 

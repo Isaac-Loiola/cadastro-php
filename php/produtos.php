@@ -5,11 +5,13 @@ require_once("db.php");
     function adicionarProduto(string $nome, float $preco) : bool{
         $pdo = getConnection();
         $cmd = $pdo->prepare("insert into produtos (nome, preco, datacad)
-        values (:nome, :preco: default)");
-        return $cmd->execute([
+        values (:nome, :preco, default)");
+        $cmd->execute([
             ':nome' => $nome,
             ':preco' => $preco
         ]);
+    
+        return (bool)$cmd;
     }
 
     function listaProdutos() : array{
